@@ -7,6 +7,7 @@ import Layout from "./Layout";
 // pages
 import Error from "../pages/error";
 import Login from "../pages/login";
+import AdminOrders from "../pages/adminorders";
 
 // context
 import { useUserState } from "../context/UserContext";
@@ -18,6 +19,7 @@ export default function App() {
   return (
     <HashRouter>
       <Switch>
+        <Route path="/adminorders" component={AdminOrders} />
         <Route exact path="/" render={() => <Redirect to="/app/dashboard" />} />
         <Route
           exact
@@ -25,7 +27,9 @@ export default function App() {
           render={() => <Redirect to="/app/dashboard" />}
         />
         <PrivateRoute path="/app" component={Layout} />
+
         <PublicRoute path="/login" component={Login} />
+
         <Route component={Error} />
       </Switch>
     </HashRouter>

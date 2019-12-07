@@ -3,18 +3,18 @@ import {
   AppBar,
   Toolbar,
   IconButton,
-  InputBase,
+  // InputBase,
   Menu,
   MenuItem,
   Fab,
-  Link
+  // Link,
 } from "@material-ui/core";
 import {
   Menu as MenuIcon,
-  MailOutline as MailIcon,
-  NotificationsNone as NotificationsIcon,
+  // MailOutline as MailIcon,
+  // NotificationsNone as NotificationsIcon,
   Person as AccountIcon,
-  Search as SearchIcon,
+  // Search as SearchIcon,
   Send as SendIcon,
   ArrowBack as ArrowBackIcon,
 } from "@material-ui/icons";
@@ -24,7 +24,7 @@ import classNames from "classnames";
 import useStyles from "./styles";
 
 // components
-import { Badge, Typography, Button } from "../Wrappers/Wrappers";
+import { Typography } from "../Wrappers/Wrappers";
 import Notification from "../Notification/Notification";
 import UserAvatar from "../UserAvatar/UserAvatar";
 
@@ -99,11 +99,11 @@ export default function Header(props) {
 
   // local
   var [mailMenu, setMailMenu] = useState(null);
-  var [isMailsUnread, setIsMailsUnread] = useState(true);
+  // var [isMailsUnread, setIsMailsUnread] = useState(true);
   var [notificationsMenu, setNotificationsMenu] = useState(null);
-  var [isNotificationsUnread, setIsNotificationsUnread] = useState(true);
+  // var [isNotificationsUnread, setIsNotificationsUnread] = useState(true);
   var [profileMenu, setProfileMenu] = useState(null);
-  var [isSearchOpen, setSearchOpen] = useState(false);
+  // var [isSearchOpen, setSearchOpen] = useState(false);
 
   return (
     <AppBar position="fixed" className={classes.appBar}>
@@ -137,11 +137,11 @@ export default function Header(props) {
           )}
         </IconButton>
         <Typography variant="h6" weight="medium" className={classes.logotype}>
-          React Material Admin
+          Creamatorium
         </Typography>
         <div className={classes.grow} />
-        <Button component={Link} href="https://flatlogic.com/templates/react-material-admin-full" variant={"outlined"} color={"secondary"} style={{marginRight: 24}}>Unlock full version</Button>
-        <div
+
+        {/* <div
           className={classNames(classes.search, {
             [classes.searchFocused]: isSearchOpen,
           })}
@@ -162,7 +162,8 @@ export default function Header(props) {
             }}
           />
         </div>
-        <IconButton
+        */}
+        {/* <IconButton
           color="inherit"
           aria-haspopup="true"
           aria-controls="mail-menu"
@@ -178,8 +179,8 @@ export default function Header(props) {
           >
             <NotificationsIcon classes={{ root: classes.headerIcon }} />
           </Badge>
-        </IconButton>
-        <IconButton
+        </IconButton> */}
+        {/* <IconButton
           color="inherit"
           aria-haspopup="true"
           aria-controls="mail-menu"
@@ -196,6 +197,7 @@ export default function Header(props) {
             <MailIcon classes={{ root: classes.headerIcon }} />
           </Badge>
         </IconButton>
+         */}
         <IconButton
           aria-haspopup="true"
           color="inherit"
